@@ -1,0 +1,14 @@
+{
+    "HOME": {
+        "NAME": "Hi, I'm George Mendoza",
+        "JOBS": "Web Developer"
+    },
+
+    "TECHNOLOGY": {
+        "TITLE": "Tech Stack",
+        "DESCRIPTION": "Languages | Frameworks | Technologies",
+        "H_SKILLS": "Hard Skills",
+        "S_SKILLS": "Soft Skills",
+        "L_SKILLS": "Learning"
+    }
+}

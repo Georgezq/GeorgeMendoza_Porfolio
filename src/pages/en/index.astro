@@ -1,0 +1,34 @@
+---
+import AboutMe from '../../components/About-me.astro';
+import Profile from '../../components/Profile.astro';
+import Projects from '../../components/Projects.astro';
+import Section from '../../components/Section.astro';
+import Tecnologias from '../../components/Tecnologias.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="George Mendoza - Desarrollador web">
+	<main class="px-4">
+
+		<Section class="py-16 md:py-28 ">
+			<Profile />
+		</Section>
+
+		<div class="space-y-24">
+			<Section class="flex mx-auto" id="sobremi">
+				<AboutMe />
+			</Section>
+	
+			<Section class="flex mx-auto" id="proyectos">
+				
+				<Projects />
+			</Section>
+
+			<Section class="flex mx-auto" >
+
+				<Tecnologias />
+			</Section>
+		</div>
+		
+	</main>
+</Layout>

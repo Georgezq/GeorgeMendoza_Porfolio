@@ -1,0 +1,104 @@
+---
+import CodeProjects from "./icons/CodeProjects.astro";
+import GithubInfo from "./icons/GithubInfo.astro";
+import WebPage from "./icons/WebPage.astro";
+import IconsProfile from "./IconsProfile.astro";
+import { all_techonologies } from "./Technologies.astro";
+
+const PROJECTS = [
+  {
+    title: "Gaming Store",
+    descriptcion:
+      "Página de Juegos, diseño basado en la página de InstangGaming, donde la finalidad es replicar el poder ver los juegos existentes, simulación de compra, reseñas, inicar sesión, favoritos y entre otras actividades. ",
+    funcion: "FullStack",
+    tags: [
+      all_techonologies.ANGULAR,
+      all_techonologies.BOOTSTRAP,
+      all_techonologies.NODEJS,
+      all_techonologies.FIREBASE,  
+          
+    ],
+    link: "https://dglb13xluxq50.cloudfront.net",
+    github: "https://github.com/Georgezq/gamingstoreAngular",
+    image: "/gaming_project.webp",
+  },
+  {
+    title: "Refugio Mininos Felices",
+    descriptcion:
+      "Proyecto dedicado al reconocimiento de un refugio de animales, donde la gente puede adoptar o apadrinar a los animales, poder donar y el contacto con los responsables.",
+    funcion: "Frontend",
+    tags: [
+      all_techonologies.ANGULAR,
+      all_techonologies.BOOTSTRAP,      
+    ],
+    link: "https://d3dcdakpj17h58.cloudfront.net",
+    github: "",
+    image: "/mininos_project.webp",
+  },
+];
+---
+
+<div class="flex flex-col gap-y-10 items-start w-full">
+  <span class="flex gap-x-4 text-2xl font-bold">
+    <CodeProjects class="size-8" />
+    Proyectos</span>
+  {
+    PROJECTS.map(({ title, descriptcion, funcion, tags, link, image, github }) => (
+      <article class="border-white/40 rounded-xl w-full flex flex-col flex-wrap space-x-0 space-y-2 group md:flex-row md:space-x-2 md:space-y-0">
+        <div class="flex lg:flex-row flex-col w-full gap-x-10 border-red-100 rounded-lg p-4 bg-slate-600/30 hover:shadow-lg hover:shadow-slate-700/90 ">
+          <div class="flex flex-col ">
+            <h3 class="text-xl md:text-2xl font-bold text-pretty ">{title}</h3>
+            <span class="mt-1 text-slate-400/90"> {funcion} </span>
+          <div class="flex flex-1 my-2">
+            <div class="flex flex-col w-full">
+              
+              <span class="text-[14px] md:text-md text-white/85">
+                {descriptcion}
+              </span>
+              <ul class="flex gap-x-3 my-1 w-full flex-wrap">
+                {tags.map((tag) => (
+                  <li class="hover:scale-110  transition delay-75 ">
+                    <span
+                      class={`relative flex items-center gap-x-2 rounded-full px-3 py-1 mt-2 mb-3 ${tag.background}
+                      `}
+                    >
+                      <tag.icon class="size-4" />
+                      <span class="text-pretty text-xs">{tag.name}</span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <footer class="flex w-full items-end justify-start mt-1 gap-4">
+                {github && (
+                <IconsProfile href={github} aria-label="codigo"> 
+                  <GithubInfo class="size-6"  />
+                  
+                </IconsProfile>
+              )}
+
+                {link && (
+                  <IconsProfile href={link} aria-label="preview">
+                    <WebPage class="size-6" />
+                  </IconsProfile>
+                )}
+
+              </footer>
+
+            </div>
+          </div>
+          </div>
+
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Ejemplo del proyecto"
+              class="object-cover object-top w-full max-w-full min-w-[400px] max-h-[375px] h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
