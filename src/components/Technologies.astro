@@ -1,4 +1,6 @@
 ---
+
+
 import AngularIcon from "./icons/icons-technologies/AngularIcon.astro";
 import BootstrapIcon from "./icons/icons-technologies/BootstrapIcon.astro";
 import NodejsIcon from "./icons/icons-technologies/NodeJS.astro";
@@ -12,7 +14,12 @@ import CssIcon from "./icons/icons-technologies/CssIcon.astro";
 import JavascriptIcon from "./icons/icons-technologies/JavaScriptIcon.astro";
 import TSIcon from "./icons/icons-technologies/TSIcon.astro";
 import GithubInfo from "./icons/GithubInfo.astro";
-
+import CsharpIcon from "./icons/icons-technologies/CsharpIcon.astro";
+import DartIcon from "./icons/icons-technologies/DartIcon.astro";
+import JavaIcon from "./icons/icons-technologies/JavaIcon.astro";
+import FlutterIcon from "./icons/icons-technologies/FlutterIcon.astro";
+import AWSIcon from "./icons/icons-technologies/AWSIcon.astro";
+import GoogleCloudIcon from "./icons/icons-technologies/google-cloud.astro";
 
 export const all_techonologies = {
    HTML:{
@@ -41,21 +48,21 @@ export const all_techonologies = {
     },
    CSHARP:{
        name: "C#",
-       icon: '',
-       class: "",
-       background: "",
+       icon: CsharpIcon,
+       class: "text-white bg-[#682876]  blur-xl ",
+       background: "bg-[#682876]/30",
    },
    DART:{
        name: "Dart",
-       icon: '',
-       class: "",
-       background: "",
+       icon: DartIcon,
+       class: "text-white bg-[#47C5FB]/50  blur-xl ",
+       background: "bg-[#47C5FB]/30",
    },
    JAVA:{
        name: "Java",
-       icon: '',
-       class: "",
-       background: "",
+       icon: JavaIcon,
+       class: "text-white bg-gradient-to-r from-[#f89820]/50 to-[#5382a1]/40  blur-xl ",
+       background: "bg-gradient-to-r from-[#5382a1]/60  to-[#5382a1]/30",
    },
    GIT:{
        name: "Git",
@@ -65,9 +72,9 @@ export const all_techonologies = {
    },
    FLUTTER:{
        name: "Flutter",
-       icon: '',
-       class: "",
-       background: "",
+       icon: FlutterIcon,
+       class: "text-white bg-[#47C5FB]/50  blur-xl ",
+       background: "bg-[#47C5FB]/30",
    },
    ANGULAR: {
        name: "Angular",
@@ -96,7 +103,7 @@ export const all_techonologies = {
     NODEJS: {
        name: "Node.js",
        icon: NodejsIcon,
-       class: "text-white bg-[#5ca44c]/30 blur-xl ",
+       class: "text-white bg-[#5ca44c]/50 blur-xl ",
        background: "bg-[#5ca44c]/30",
     },
     FIREBASE:{
@@ -108,8 +115,8 @@ export const all_techonologies = {
     MONGO:{
        name: "Mongo",
        icon: MongoIcon,
-       class: "",
-       background: "bg-gradient-to-r from-[#00ed64]/60  to-[#00684a]/30",
+       class: "text-white bg-[#5ca44c]/50 blur-xl ",
+       background: "bg-[#5ca44c]/30",
     },
     React:{
        name: "React",
@@ -119,15 +126,15 @@ export const all_techonologies = {
     },
     AWS:{
        name: "AWS",
-       icon: '',
-       class: "",
-       background: "b",
+       icon: AWSIcon,
+       class: "text-white bg-gradient-to-r from-[#FF9900]/40 to-[#000000]/40  blur-xl ",
+       background: "bg-gradient-to-r from-[#00ed64]/60  to-[#00684a]/30",
     },
     GOOGLE_CLOUD:{
-       name: "",
-       icon: '',
-       class: "",
-       background: "",
+       name: "Google Cloud",
+       icon: GoogleCloudIcon,
+       class: 'text-white blur-xl bg-gradient-to-r from-[#4285F4]/60 via-[#FBBC05]/50 to-[#EA4335]/40',
+       background: 'bg-gradient-to-r from-[#4285F4] via-[#FBBC05] to-[#EA4335]'  
    },
     
 }

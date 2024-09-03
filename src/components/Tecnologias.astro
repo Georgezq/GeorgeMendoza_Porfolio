@@ -15,6 +15,7 @@ const mas_conocimiento = [
   all_techonologies.BOOTSTRAP,
   all_techonologies.FIREBASE,
   all_techonologies.GIT,
+  all_techonologies.NODEJS
 ];
 
 const conocimiento_medio = [
@@ -22,7 +23,9 @@ const conocimiento_medio = [
   all_techonologies.FLUTTER,
   all_techonologies.DART,
   all_techonologies.GOOGLE_CLOUD,
-  all_techonologies.AWS
+  all_techonologies.AWS,
+  all_techonologies.MONGO,
+  all_techonologies.CSHARP
 ]
 
 const aprendiendo = [
@@ -62,7 +65,7 @@ const aprendiendo = [
     <span class="text-lg text-white">{i18n.TECHNOLOGY.S_SKILLS}</span>
     <ul class="flex gap-x-10 flex-wrap justify-center lg:justify-normal">
       {
-        aprendiendo.map((tags) => (
+        conocimiento_medio.map((tags) => (
           <li class=" flex items-center justify-center mr-6 lg:mr-10 my-8 lg:my-10 view-animate-[--subjectReveal] animate-fade-in-right animate-range-[entry_10%_contain_25%]">
             <span
               class={`flex p-8 rounded-full absolute z-10 ${tags.class} `}
