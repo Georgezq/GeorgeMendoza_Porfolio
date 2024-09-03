@@ -27,19 +27,21 @@ if (currentUrl.includes('/en/')) {
   }
 </style>
 
-<div class="flex items-center justify-center flex-row gap-1 py-2 md:py-1 border rounded-xl w-30 ">
+<div class="flex items-center justify-center flex-row gap-1 border rounded-xl w-30 ">
+  <ul class="flex gap-2 md:py-1 py-2">
   {Object.entries(languages).map(([lang]) => (
     <li class="list-none">
       {
         lang_es.includes(lang) &&  (
-          <a class={`lenguaje-link rounded-l-xl px-2 py-2 md:px-5 md:py-2  ${selectedLang === lang ? 'selected' : ''}` } href={`/`}>{lang}</a>
+          <a class={`lenguaje-link rounded-l-xl px-2  md:px-5 py-1  ${selectedLang === lang ? 'selected' : ''}` } href={`/`}>{lang}</a>
         ) 
       }
       {
         lang_en.includes(lang) && (
-          <a class={`lenguaje-link rounded-r-xl roundded-r-xl px-2 py-2 md:px-5 md:py-2 ${selectedLang === lang ? 'selected' : ''}`} href={`/${lang}/`}>{lang}</a>
+          <a class={`lenguaje-link rounded-r-xl roundded-r-xl px-2 py-1 md:px-5 ${selectedLang === lang ? 'selected' : ''}`} href={`/${lang}/`}>{lang}</a>
         )
       }
     </li>
   ))}
+  </ul>
 </div>

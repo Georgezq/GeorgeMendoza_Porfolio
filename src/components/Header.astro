@@ -10,15 +10,12 @@ const translatePath = useTranslatedPath(lang);
 
 ---
 
-<header class="flex justify-center items-center xl:w-[1420px] lg:w-[940px] md:w-[768px] w-[380px] p-8 m-2 mx-auto ">
-
-    <nav class="flex gap-4 lg:gap-16 font-bold opacity-80 lg:text-lg text-[10px] items-center justify-center">
+<header class="flex justify-center z-50 items-center xl:w-[1420px] lg:w-[940px] md:w-[768px] w-[380px] p-7  mx-auto ">
+    <nav class="flex gap-4  rounded-xl px-8 py-3 w-full z-50 lg:gap-16 font-bold  lg:text-lg text-[10px] items-center justify-center">
         <a href={translatePath('#inicio')}>{t('nav.home')}</a>
         <a href={translatePath('#sobremi')}>{t('nav.sobremi')}</a>
         <a href={translatePath('#proyectos')}>{t('nav.projects')}</a>
         <a href={translatePath('#formacion')}>{t('nav.training')}</a>
         <CambioIdioma>
     </nav>
-
 </header>
-
