@@ -10,7 +10,7 @@ export const languages = {
       'nav.home':'Inicio',
       'nav.sobremi':'Sobre Mi',
       'nav.projects':'Proyectos',
-      'nav.training':'Formacion', 
+      'nav.training':'Formación', 
     },
 
     en: {

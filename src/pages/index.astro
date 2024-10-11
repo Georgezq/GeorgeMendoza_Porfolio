@@ -1,5 +1,6 @@
 ---
 import AboutMe from '../components/About-me.astro';
+import IconsFixed from '../components/IconsFixed.astro';
 import Profile from '../components/Profile.astro';
 import Projects from '../components/Projects.astro';
 import Section from '../components/Section.astro';
@@ -10,7 +11,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="George Mendoza - Desarrollador web">
 	<main class="px-4">
 
-		<Section class="py-16 md:py-28 ">
+		<Section class="pt-32 md:pt-56 pb-28 " id="inicio">
 			<Profile />
 		</Section>
 
@@ -29,6 +30,10 @@ import Layout from '../layouts/Layout.astro';
 				<Tecnologias />
 			</Section>
 		</div>
+
 		
 	</main>
+	<div class="absolute">
+		<IconsFixed />
+	</div>
 </Layout>

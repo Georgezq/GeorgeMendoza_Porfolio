@@ -1,14 +1,22 @@
 {
     "HOME": {
-        "NAME": "Hi, I'm George Mendoza",
+        "NAME": "¡Hello! I'm George Mendoza",
         "JOBS": "Web Developer"
     },
-
+    "PROJECT_NEW": "In development",
     "TECHNOLOGY": {
         "TITLE": "Tech Stack",
         "DESCRIPTION": "Languages | Frameworks | Technologies",
         "H_SKILLS": "Hard Skills",
         "S_SKILLS": "Soft Skills",
         "L_SKILLS": "Learning"
+    },
+    "ABOUT_ME": "I am a passionate student of programming, with a particular focus on FrontEnd. I constantly strive to improve my knowledge and skills, and I enjoy solving challenges that allow me to hone my logic and creativity. Whether it's learning a new technology or debugging code, I'm always ready to face any challenge that comes my way.",
+    "PROJECTS1": {
+     "DESCRIPTION_PROJECTS": [
+        "Games Page, design based on the InstangGaming page, where the purpose is to replicate the ability to view existing games, purchase simulation, reviews, login, favorites and other activities.",
+        "Project dedicated to the recognition of an animal shelter, where people can adopt or sponsor animals, donate and contact those responsible.",
+        "Facebook page clone, with integrated chat, story creation and posts."
+     ]   
     }
 }

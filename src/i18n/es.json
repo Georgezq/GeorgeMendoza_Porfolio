@@ -1,14 +1,22 @@
 {
     "HOME": {
-        "NAME": "Hola, soy George Mendoza",
+        "NAME": "¡Hola! soy George Mendoza",
         "JOBS": "Desarrollador web"
     },
+    "PROJECT_NEW": "En desarrollo",
     "TECHNOLOGY": {
         "TITLE": "Tech Stack",
         "DESCRIPTION": "Lenguajes | Frameworks | Tecnologias",
         "H_SKILLS": "Habilidades Fuertes",
         "S_SKILLS": "Habilidades Blandas",
         "L_SKILLS": "Estoy aprendiendo"
-    
+    },
+    "ABOUT_ME": "Soy un estudiante apasionado por la programación, con un enfoque particular en el FrontEnd. Me esfuerzo constantemente por mejorar mis conocimientos y habilidades, y disfruto resolviendo desafíos que me permiten afinar mi lógica y creatividad. Ya sea aprendiendo una nueva tecnología o depurando código, siempre estoy listo para enfrentar cualquier reto que se cruce en mi camino. ",
+    "PROJECTS1": {
+     "DESCRIPTION_PROJECTS": [
+        "Página de Juegos, diseño basado en la página de InstangGaming, donde la finalidad es replicar el poder ver los juegos existentes, simulación de compra, reseñas, inicar sesión, favoritos y entre otras actividades.",
+        "Proyecto dedicado al reconocimiento de un refugio de animales, donde la gente puede adoptar o apadrinar a los animales, poder donar y el contacto con los responsables.",
+        "Clon de la página de Facebook, con chat integrado, creación de historias y publicaciones"
+     ]   
     }
 }

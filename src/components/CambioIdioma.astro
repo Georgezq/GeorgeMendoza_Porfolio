@@ -1,47 +1,37 @@
 ---
-import { languages } from '../i18n/ui';
+import { languages } from "../i18n/ui";
 
 const lang_es = "es";
 
 const lang_en = "en";
 
-const currentUrl = Astro.url.pathname; 
-let selectedLang = 'es'; 
+const currentUrl = Astro.url.pathname;
+let selectedLang = "es";
 
-if (currentUrl.includes('/en/')) {
-  selectedLang = 'en';
-} else if (currentUrl === '/') {
-  selectedLang = 'es';
+if (currentUrl.includes("/en/")) {
+  selectedLang = "en";
+} else if (currentUrl === "/") {
+  selectedLang = "es";
 }
 
 ---
 
 <style>
-  .language-link {
-    transition: background-color 1s ease, color 1s ease;
-  }
-
   .selected {
-    background-color: #64748b; 
+    background-color: #64748b99;
     color: white;
+    /* background: linear-gradient(#ec4e23, #ffffff4b); */
   }
 </style>
 
-<div class="flex items-center justify-center flex-row gap-1 border rounded-xl w-30 ">
-  <ul class="flex gap-2 md:py-1 py-2">
-  {Object.entries(languages).map(([lang]) => (
-    <li class="list-none">
-      {
-        lang_es.includes(lang) &&  (
-          <a class={`lenguaje-link rounded-l-xl px-2  md:px-5 py-1  ${selectedLang === lang ? 'selected' : ''}` } href={`/`}>{lang}</a>
-        ) 
-      }
-      {
-        lang_en.includes(lang) && (
-          <a class={`lenguaje-link rounded-r-xl roundded-r-xl px-2 py-1 md:px-5 ${selectedLang === lang ? 'selected' : ''}`} href={`/${lang}/`}>{lang}</a>
-        )
-      }
+<div class="flex items-center justify-center flex-row gap-1 w-30">
+  <ul class="flex">
+        <li class="list-none">
+          <div class="rounded-[50px] h-fit bg-[#27272a] flex justify-center items-center">
+              <a href="/" class={`text-sm p-5  text-white/60 rounded-tl-2xl rounded-bl-2xl py-1 leading-normal ${selectedLang === lang_es ? 'selected' : ''}`}> Esp </a>
+              <a href="/en/" class={`text-sm p-5 text-white/60 rounded-tr-2xl rounded-br-2xl py-1 leading-normal ${selectedLang === lang_en ? 'selected' : ''}`}> Eng </a>
+        </div>
     </li>
-  ))}
+          
   </ul>
 </div>

@@ -1,6 +1,8 @@
 ---
+import { getI18N } from "../i18n";
 import PersonInfo from "./icons/PersonInfo.astro";
-import Section from "./Section.astro";
+const { currentLocale } = Astro;
+const i18n = getI18N({currentLocale})
 ---
 
 <div class="max-w mx-auto">
@@ -12,9 +14,7 @@ import Section from "./Section.astro";
 
         <div class="info-me pt-6">
             <span class="text-pretty lg:text-[18px] text-[16px] text-white/90 font-medium">
-                Soy un estudiante apasionado por la programación, con un enfoque particular en el <span class="text-red-300/90">FrontEnd</span>. Me esfuerzo constantemente por mejorar mis conocimientos y habilidades, 
-                y disfruto resolviendo desafíos que me permiten afinar mi lógica y creatividad. 
-                Ya sea aprendiendo una nueva tecnología o depurando código, siempre estoy listo para enfrentar cualquier reto que se cruce en mi camino.
+               {i18n.ABOUT_ME}
             </span>
         </div>
     </div>
