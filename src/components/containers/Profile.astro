@@ -1,0 +1,25 @@
+---
+import { getI18N } from "../../i18n";
+import ButtonsProfile from "../ButtonsProfile.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({currentLocale})
+---
+
+<div class="max-w w-[940px] mx-auto flex items-start justify-start  ">
+  <div class="flex gap-14 flex-wrap items-start justify-center lg:justify-normal">
+    
+    <div class="info">
+      <div class="message flex flex-col items-center lg:items-start animate-slide-in-left">
+        <span class="text-2xl lg:text-4xl font-bold"> {i18n.HOME.NAME} </span>
+        <span class="text-xl lg:text-2xl font-semibold text-white/70 mt-1"></span>
+        <div class="w-3/4 my-4">
+          <span class="text-2xl">+1 año de experiencia, apasionado en el <b class="text-[#3379bb]">{i18n.HOME.JOBS}</b>. Dedicado al desarrollo de páginas agradables y únicas.</span>
+        </div>
+
+          <ButtonsProfile> CV </ButtonsProfile>
+        </div>
+        
+        
+  </div>
+</div>

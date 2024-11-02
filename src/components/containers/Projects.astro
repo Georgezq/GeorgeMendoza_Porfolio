@@ -1,10 +1,10 @@
 ---
-import CodeProjects from "./icons/CodeProjects.astro";
-import GithubInfo from "./icons/GithubInfo.astro";
-import WebPage from "./icons/WebPage.astro";
-import IconsProfile from "./IconsProfile.astro";
-import { all_techonologies } from "./Technologies.astro";
-import { getI18N } from "../i18n";
+import CodeProjects from "../icons/CodeProjects.astro";
+import GithubInfo from "../icons/GithubInfo.astro";
+import WebPage from "../icons/WebPage.astro";
+import IconsProfile from "../IconsProfile.astro";
+import { all_techonologies } from "../Technologies.astro";
+import { getI18N } from "../../i18n";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -13,7 +13,6 @@ const PROJECTS = [
   {
     title: "Gaming Store",
     descriptcion: `${i18n.PROJECTS1.DESCRIPTION_PROJECTS[0]}`,
-    funcion: "FullStack",
     tags: [
       all_techonologies.ANGULAR,
       all_techonologies.BOOTSTRAP,
@@ -28,7 +27,6 @@ const PROJECTS = [
   {
     title: "Refugio Mininos Felices",
     descriptcion: `${i18n.PROJECTS1.DESCRIPTION_PROJECTS[1]}`,
-    funcion: "Frontend",
     tags: [all_techonologies.ANGULAR, all_techonologies.BOOTSTRAP],
     link: "https://d3dcdakpj17h58.cloudfront.net",
     github: "",
@@ -38,7 +36,6 @@ const PROJECTS = [
   {
     title: "Facebook Clone",
     descriptcion: `${i18n.PROJECTS1.DESCRIPTION_PROJECTS[2]}`,
-    funcion: "Frontend",
     tags: [
       all_techonologies.ANGULAR,
       all_techonologies.TAILWIND,
@@ -62,7 +59,6 @@ const PROJECTS = [
       ({
         title,
         descriptcion,
-        funcion,
         tags,
         link,
         image,
@@ -75,25 +71,22 @@ const PROJECTS = [
               <h3 class="text-xl md:text-2xl font-bold text-pretty ">
                 {title}
               </h3>
-              <span class="mt-1 text-slate-400/90"> {funcion} </span>
+              <div class="flex flex-row my-4 flex-wrap gap-x-2">
+              {tags.map((tag) => (
+                <span
+                class={`relative flex items-center gap-x-2 bg-[#323f4e99] my-2 rounded-full px-3 py-1
+                  `}
+                  >
+                  <tag.icon class="size-4" />
+                  <span class="text-pretty text-sm">{tag.name}</span>
+                </span>
+              ))}
+              </div>
               <div class="flex flex-1 my-2">
                 <div class="flex flex-col w-full">
-                  <span class="text-[14px] md:text-md text-white/85">
+                  <span class="text-[16px] md:text-md text-white/85">
                     {descriptcion}
                   </span>
-                  <ul class="flex gap-x-3 my-1 w-full flex-wrap">
-                    {tags.map((tag) => (
-                      <li class="hover:scale-110  transition delay-75 ">
-                        <span
-                          class={`relative flex items-center gap-x-2 rounded-full px-3 py-1 mt-2 mb-3 ${tag.background}
-                      `}
-                        >
-                          <tag.icon class="size-4" />
-                          <span class="text-pretty text-xs">{tag.name}</span>
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
 
                   <footer class="flex w-full items-end justify-start h-full gap-4 ">
                     {github && (
@@ -108,11 +101,11 @@ const PROJECTS = [
                       </IconsProfile>
                     )}
 
-                     {isARecentProject && (
+                    {isARecentProject && (
                       <div class="bg-white/5 rounded-2xl px-3 py-1 text-sm ">
                         {i18n.PROJECT_NEW}
                       </div>
-                    )}     
+                    )}
                   </footer>
                 </div>
               </div>

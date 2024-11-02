@@ -1,8 +1,8 @@
 ---
 import AboutMe from '../components/About-me.astro';
 import IconsFixed from '../components/IconsFixed.astro';
-import Profile from '../components/Profile.astro';
-import Projects from '../components/Projects.astro';
+import Profile from '../components/containers/Profile.astro';
+import Projects from '../components/containers/Projects.astro';
 import Section from '../components/Section.astro';
 import Tecnologias from '../components/Tecnologias.astro';
 import Layout from '../layouts/Layout.astro';
@@ -16,18 +16,17 @@ import Layout from '../layouts/Layout.astro';
 		</Section>
 
 		<div class="space-y-24">
-			<Section class="flex mx-auto" id="sobremi">
-				<AboutMe />
-			</Section>
-	
+			
 			<Section class="flex mx-auto" id="proyectos">
-				
 				<Projects />
 			</Section>
-
-			<Section class="flex mx-auto" >
-
+			
+			<Section class="flex mx-auto" >	
 				<Tecnologias />
+			</Section>
+
+			<Section class="flex mx-auto" id="sobremi">
+				<AboutMe />
 			</Section>
 		</div>
 

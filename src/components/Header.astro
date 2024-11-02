@@ -16,42 +16,20 @@ const translatePath = useTranslatedPath(lang);
 <header class="flex fixed md:justify-center justify-end items-center z-50 mx-auto w-full">
     
   <nav
-    class="hidden md:flex mt-5 gap-4 bg-[#0a0a0ab3] rounded-3xl px-8 py-2 w-auto z-50 lg:gap-12 font-normal lg:text-[16px] text-[10px] items-center justify-center leading-4"
-  >
-  
-   
-    <div class="hidden w-full md:flex items-center gap-5 md:w-auto " id="navbar-default">
+    class="hidden md:flex mt-5 gap-x-6 bg-[#0a0a0ab3] rounded-3xl px-8 py-2 w-auto z-50 lg:gap-12 font-normal lg:text-[16px] text-[10px] items-center justify-center leading-4"
+  >   
+    <div class="hidden w-full md:flex items-center gap-x-6 md:w-auto " id="navbar-default">
       <a href={translatePath("#inicio")}>{t("nav.home")}</a>
+      <hr class="h-px my-2 bg-gray-500 border dark:bg-gray-700">
       <a href={translatePath("#sobremi")}>{t("nav.sobremi")}</a>
+      <hr class="h-px my-2 bg-gray-500 border dark:bg-gray-700">
       <a href={translatePath("#proyectos")}>{t("nav.projects")}</a>
+      <hr class="h-px my-2 bg-gray-500 border dark:bg-gray-700">
       <a href={translatePath("#formacion")}>{t("nav.training")}</a>
       <CambioIdioma />
     </div>
   </nav>
 
-  <!-- <button
-  data-collapse-toggle="navbar-default"
-  type="button"
-  class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-  aria-controls="navbar-default"
-  aria-expanded="false"
->
-  <span class="sr-only">Open main menu</span>
-  <svg
-    class="w-6 h-6"
-    aria-hidden="true"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 17 14"
-  >
-    <path
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M1 1h15M1 7h15M1 13h15"></path>
-  </svg>
-</button> -->
 
 </header>
 

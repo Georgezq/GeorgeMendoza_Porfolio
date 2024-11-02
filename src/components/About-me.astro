@@ -1,21 +1,27 @@
 ---
+import { Image } from "astro:assets";
 import { getI18N } from "../i18n";
 import PersonInfo from "./icons/PersonInfo.astro";
 const { currentLocale } = Astro;
 const i18n = getI18N({currentLocale})
+
+const miFoto = '/its_me.webp' 
 ---
 
-<div class="max-w mx-auto">
+<div class="max-w w-full mx-auto">
     <div class="flex flex-col items-start ">
 
         <span class="flex items-center justify-center gap-x-4 text-2xl font-bold text-start">
             <PersonInfo class="size-8"/>
             Sobre Mi</span>
 
-        <div class="info-me pt-6">
-            <span class="text-pretty lg:text-[18px] text-[16px] text-white/90 font-medium">
+        <div class="info-me py-6 mt-10 w-full flex flex-row gap-x-12 items-center">
+            <div class="img w-full -rotate-3 border border-gray-500 rounded-lg">
+                <img src={miFoto} class="rounded-2xl size-60 object-cover p-2" />
+            </div>
+            <span class="text-pretty lg:text-xl text-lg text-white/90 font-regular">
                {i18n.ABOUT_ME}
-            </span>
+            </span>   
         </div>
     </div>
 </div>
