@@ -1,0 +1,49 @@
+---
+import TechIcon from "../icons/TechIcon.astro";
+import { all_techonologies } from "../Technologies.astro";
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const mas_conocimiento = [
+  all_techonologies.HTML,
+  all_techonologies.CSS,
+  all_techonologies.JS,
+  all_techonologies.TS,
+  all_techonologies.ANGULAR,
+  all_techonologies.BOOTSTRAP,
+  all_techonologies.FIREBASE,
+  all_techonologies.GIT,
+  all_techonologies.NODEJS,
+  all_techonologies.ASTRO,
+  all_techonologies.TAILWIND,
+];
+
+---
+
+<div class="flex flex-col gap-y-10 items-start w-full">
+  <span class="flex gap-x-4 text-2xl font-bold">
+    <TechIcon class="size-8" />
+    {i18n.TECHNOLOGY.TITLE}</span
+  >
+
+
+  <div class="flex flex-col gap-y-10">
+    <ul class="flex gap-x-10 flex-wrap justify-center lg:justify-normal">
+      {
+        mas_conocimiento.map((tags_) => (
+          <li class=" flex items-center justify-center mr-6 lg:mr-10 my-8 lg:my-10 view-animate-[--subjectReveal] animate-fade-in-right animate-range-[entry_10%_contain_25%]">
+            <span
+              class={`flex p-8 rounded-full absolute z-10 `}
+            ></span>
+            <span class={`icons flex z-20 `}>
+              <tags_.icon class="size-8" />
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+</div>

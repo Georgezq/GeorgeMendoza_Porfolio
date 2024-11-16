@@ -21,11 +21,11 @@ const translatePath = useTranslatedPath(lang);
     <div class="hidden w-full md:flex items-center gap-x-6 md:w-auto " id="navbar-default">
       <a href={translatePath("#inicio")}>{t("nav.home")}</a>
       <hr class="h-px my-2 bg-gray-500 border dark:bg-gray-700">
-      <a href={translatePath("#sobremi")}>{t("nav.sobremi")}</a>
-      <hr class="h-px my-2 bg-gray-500 border dark:bg-gray-700">
       <a href={translatePath("#proyectos")}>{t("nav.projects")}</a>
       <hr class="h-px my-2 bg-gray-500 border dark:bg-gray-700">
       <a href={translatePath("#formacion")}>{t("nav.training")}</a>
+      <hr class="h-px my-2 bg-gray-500 border dark:bg-gray-700">
+      <a href={translatePath("#sobremi")}>{t("nav.sobremi")}</a>
       <CambioIdioma />
     </div>
   </nav>

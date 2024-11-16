@@ -1,10 +1,10 @@
 ---
-import AboutMe from '../../components/About-me.astro';
+import AboutMe from '../../components/containers/About-me.astro';
 import IconsFixed from '../../components/IconsFixed.astro';
 import Profile from '../../components/containers/Profile.astro';
 import Projects from '../../components/containers/Projects.astro';
 import Section from '../../components/Section.astro';
-import Tecnologias from '../../components/Tecnologias.astro';
+import Tecnologias from '../../components/containers/Tecnologias.astro';
 import Layout from '../../layouts/Layout.astro';
 ---
 
@@ -21,7 +21,7 @@ import Layout from '../../layouts/Layout.astro';
 				<Projects />
 			</Section>
 			
-			<Section class="flex mx-auto" >	
+			<Section class="flex mx-auto" id="formacion">	
 				<Tecnologias />
 			</Section>
 

@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import { getI18N } from "../../i18n";
+import PersonInfo from "../icons/PersonInfo.astro";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const miFoto = "/its_me.webp";
+---
+
+<div class="flex flex-col items-start">
+  <span
+    class="flex items-center justify-center gap-x-4 text-2xl font-bold text-start"
+  >
+    <PersonInfo class="size-8" />
+    Sobre Mi</span
+  >
+
+  <div
+    class="info-me py-6 mt-6 md:mt-10 w-full flex flex-col md:flex-row gap-x-12 items-center"
+  >
+    <div class="img w-full drop-shadow-lg rounded-lg md:m-auto mb-10">
+      <img
+        src={miFoto}
+        class="rounded-2xl md:size-80 size-auto object-cover p-2"
+      />
+    </div>
+    <span class="text-pretty lg:text-xl text-lg text-white/90 font-regular">
+      {i18n.ABOUT_ME}
+    </span>
+  </div>
+</div>
